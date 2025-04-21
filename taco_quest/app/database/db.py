@@ -2,7 +2,7 @@ from sqlmodel import create_engine, Session
 from app.config.settings import settings
 
 # Create the database engine
-engine = create_engine(settings.DATABASE_URL, echo=settings.DEBUG)
+engine = create_engine(settings.DATABASE_URL, echo=True)
 
 # Dependency to get a database session
 def get_session():
